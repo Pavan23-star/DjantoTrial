@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Subjects in {{ selected_course }}</h2>
+<ul>
+    {% for rec in subjects_included %}
+        <li><a href="{% url 'student:subjectlecturerView' rec.id%}">{{ rec.name }}</a></li>
+    {% endfor %}
+</ul>
+<ul>
+
+</ul>
+
+</body>
+</html>

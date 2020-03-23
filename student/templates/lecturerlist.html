@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table border="1px">
+        <th>Lecturer Name</th>
+        <th>Subject</th>
+        {% for record in total_list %}
+            <tr>
+                <td>{{ record.name }}</td>
+                <td>{{ record.subjects_taken }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

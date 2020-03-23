@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table border="1px">
+        <th>Roll No:</th>
+        <th>Student Name</th>
+        <th>Course Taken</th>
+        {% for stud in total_list %}
+            <tr>
+                <td>{{ stud.roll_num }}</td>
+                <td>{{ stud.name }}</td>
+                <td><a href="{% url 'student:coursedetailView' stud.courses.id %}">{{ stud.courses }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
